@@ -1,57 +1,81 @@
-<!doctype>
+<!DOCTYPE html >
 <html>
     <head>
-
-    <title align="center">  student application form</title>
-    </head>
-   <body> 
-
-    <form> 
         
+    <title >  student application form</title>   
     <style>
 
-        body{
-            background-image: url("https://www.schoolmind.com/wp-content/uploads/2017/12/sm_background.jpg");
-                justify-content: center;
-            display:flex; 
-        } 
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://img.freepik.com/premium-photo/engineering-tools-blueprint-background_822916-7552.jpg?w=2000");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-position: center;
+  background-repeat: no-repeat;
+
+        }
+
         table{
             background-color:rgb(248, 247, 247);
             border:2px double black;
-            padding:20px;
+            padding:0px 20px;
             border-radius:10px; 
             justify-content: center;
     border-collapse: separate;
     border-spacing: 0 15px;
+    align-items: center;
 
 }
         button{
-            background-color:rgb(242, 242, 243);
-            color:rgb(222, 162, 141);
-            padding:10px;
+            background-color:rgb(57, 164, 240);
+            color:rgb(255, 255, 255);
+            padding:10px 20px;
             align-content: center;
             justify-content: center;
-            border-radius:5px;
+            border-radius:10px;
         } 
         label{
             font-weight: bold;
-            font-variant-caps: all-petite-caps;
-        } 
-        p1,p2,p3,p4,p5,p6{
-            font-weight: bold;
-            font-variant-caps: all-petite-caps;
+            font-size: 18px;
+            text-transform: capitalize;
+            
+        }
+       
+        th {
+            font-size: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        td{
+            vertical-align: middle;
+        }
+        input{
+            
+            padding:8px;
+            border-radius:5px;  
+
+        }
+        textarea{
+            padding:10px;
+            border-radius:5px;
         }
          </style>
-        
-    <h1 align="center">STUDENT APPLICATION</h1>
-    <br>
+          </head>
+           <body> 
+              <form>
     <table>
-    <tr>
-     <p id="paragraph">
+        <tr>
+        <th>
+         STUDENT APPLICATION FORM
+</th>
+        </tr>
+    <tr>    
     <td><label id="firstname">first name:</label></td>
-    </p>
-    <td>
-   <input type="text"placeholder="enter your first name" name="firstname">
+<td><input type="text"placeholder="enter your first name" name="firstname" required>
     </td>
     </tr>
 
@@ -60,11 +84,11 @@
    <label>last name:</label>
     </td>
     <td>
-   <input type="text"placeholder="enter your last name" name="secondname"></td>
+   <input type="text"placeholder="enter your last name" name="secondname" required></td>
     </tr>
    <tr>
    <td> <label>age:</label></td>
-    <td><input type="number"placeholder="enter your age" name="age"></td>
+    <td><input type="number"placeholder="enter your age" name="age" required></td>
     </tr>
     <tr>
     <td>
@@ -74,6 +98,8 @@
     <label>male</label>
     <input type="radio"name="gender">
     <label>female</label>
+     <input type="radio"name="gender">
+    <label>other</label>
     </td>
     </tr>
   
@@ -81,14 +107,15 @@
     <td>
     <label>rank:</label>  </td>
     <td>
-    <input type="number"placeholder="enter your rank" name="rank" color="red"></td>
+    <input type="number"placeholder="enter your rank" name="rank" color="red" required></td>
     </tr>
 <tr>
 <td>
 <label>branch:</label>
 </td>
 <td>
-<select>
+<select name="branch" required>
+    <option>select your branch</option>
     <option>CSE</option>
     <option>CSM</option>
     <option>MECH</option>
@@ -100,13 +127,13 @@
 <tr>
 <td>
 <label>address:</label></td>
-<td><textarea placeholder="enter your address"></textarea></td>
+<td><textarea placeholder="enter your address" required></textarea></td>
 </tr>
 <tr>
 <td>
 <label>scc hall ticket number:</label></td>
 <td>
-<input type="number"placeholder="enter your scc hall ticket number" name="scchallticketnumber">
+<input type="number"placeholder="enter your scc hall ticket number" name="scchallticketnumber" required>
 </td>
 </tr>
 <tr>
@@ -114,7 +141,7 @@
 <label>ssc marks:</label>
 </td>
 <td>
-<input type="number"placeholder="enter your ssc marks" name="sscmarks">
+<input type="number"placeholder="enter your ssc marks" name="sscmarks" required>
 </td>
 </tr>
 <tr>
@@ -122,7 +149,7 @@
 <label>inter hall ticket number:</label>
 </td>
 <td>
-<input type="number"placeholder="enter your inter hall ticket number" name="interhallticketnumber">
+<input type="number"placeholder="enter your inter hall ticket number" name="interhallticketnumber" required>
 </td>
 </tr>
 <tr>
@@ -130,7 +157,7 @@
 <label>intermediate marks:</label>
 </td>
 <td>
-<input type="number"placeholder="enter your intermediate marks" name="intermarks">
+<input type="number"placeholder="enter your intermediate marks" name="intermarks" required>
 </td>
 </tr>
 <tr>
@@ -138,7 +165,7 @@
 <label>phone number:</label>
 </td>
 <td>
-<input type="number"placeholder="enter your phone number" name="phonenumber">
+<input type="number"placeholder="enter your phone number" name="phonenumber" required>
 </td>
 </tr>
 <tr>
@@ -146,55 +173,55 @@
 <label>email id:</label>
 </td>
 <td>
-<input type="email"placeholder="enter your email id" name="emailid">
+<input type="email"placeholder="enter your email id" name="emailid" required>
 </td>
 </tr>    
 <tr>
 <td>
-<p1>upload your photo:</p1>
+<label>upload your photo:</label>
 </td>
 <td>
-<input type="file"name="uploadphoto">
+<input type="file"name="uploadphoto" required>
 </td>
 </tr>
     <tr>
 <td>
-<p2>    upload your signature:</p2>
+<label>    upload your signature:</label>
 </td>
 <td>
-<input type="file"name="uploadsignature">
+<input type="file"name="uploadsignature" required>
 </td>
 </tr>
 <tr>
     <td>
-<p3>    upload your scc marksheet:</p3>
+<label>    upload your scc marksheet:</label>
     </td>
     <td>    
-<input type="file"name="uploadsscmarksheet">
+<input type="file"name="uploadsscmarksheet" required>
     </td>
 </tr>
 <tr>
     <td>
-<p4>    upload your inter marksheet:    </p4>
+<label>    upload your inter marksheet:    </label>
 </td>
     <td>
-<input type="file"name="uploadintermarksheet">
+<input type="file"name="uploadintermarksheet" required>
 </td>
 </tr>
 <tr>
     <td>
-<p5> upload your qualifying exam hall ticket:</p5>
+<label> upload your qualifying exam hall ticket:</label>
     </td>
     <td>
-<input type="file"name="uploadqualifyingexamhallticket">    
+<input type="file"name="uploadqualifyingexamhallticket" required>    
     </td>
 </tr>
 <tr>
     <td>
-<p6>upload your signature:</p6>
+<label>upload your signature:</label>
     </td>
     <td>
-<input type="file"name="uploadsignature">   
+<input type="file"name="uploadsignature" required>   
     </td>
 </tr>   
 <tr><td></td> </tr>
